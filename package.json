@@ -1,0 +1,10 @@
+{
+  "name": "pomodoro-extension",
+  "version": "1.0.0",
+  "description": "A Pomodoro timer Chrome extension",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

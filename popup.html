@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Extension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bento-grid">
+        <div class="bento-box bento-box-large">
+            <h2 class="title">Pomodoro Timer</h2>
+            <div class="timer-container">
+                <div class="timer-circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="timer-background" cx="50" cy="50" r="40" />
+                        <circle id="timer-progress" class="timer-progress" cx="50" cy="50" r="40" />
+                    </svg>
+                    <span id="timer-text" class="timer-text">25:00</span>
+                </div>
+            </div>
+            <button id="start-stop" class="button button-primary">Start</button>
+        </div>
+        
+        <div class="bento-box">
+            <h3 class="subtitle">Today's Progress</h3>
+            <div id="tomato-container" class="tomato-container"></div>
+        </div>
+        
+        <div class="bento-box">
+            <h3 class="subtitle">Settings</h3>
+            <div class="setting-item">
+                <label for="pomodoro-time">Pomodoro Duration (minutes):</label>
+                <input type="range" id="pomodoro-time" min="1" max="60" value="25">
+                <span id="pomodoro-time-value">25</span>
+            </div>
+            <div class="setting-item">
+                <label for="break-time">Break Duration (minutes):</label>
+                <input type="range" id="break-time" min="1" max="30" value="5">
+                <span id="break-time-value">5</span>
+            </div>
+            <div class="setting-item">
+                <label for="blocked-sites">Blocked Sites (one per line):</label>
+                <textarea id="blocked-sites" rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <button id="toggle-widget" class="button button-secondary">Toggle Widget</button>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
